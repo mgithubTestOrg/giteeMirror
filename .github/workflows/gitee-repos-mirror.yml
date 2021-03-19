@@ -25,8 +25,8 @@ jobs:
       with:
         src: github/mgithubTestOrg
         dst: gitee/mgithubTestOrg
-        dst_key: YPsFkZY5Rls8tssmaa2zIVPJjs09ARuqdali7hRC7Wk
-        dst_token:  5e558f0db48020731e5e39b2a0834c15
+        dst_key: hub_mirror
+        dst_token:  personal_token
         account_type: org
         timeout: 600
         debug: true
