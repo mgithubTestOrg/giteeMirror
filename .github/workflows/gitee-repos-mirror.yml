@@ -25,8 +25,8 @@ jobs:
       with:
         src: github/mgithubTestOrg
         dst: gitee/mgithubTestOrg
-        dst_key: hub_mirror
-        dst_token:  personal_token
+        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+        dst_token:  ${{ secrets.GITEE_TOKEN }}
         account_type: org
         timeout: 600
         debug: true
