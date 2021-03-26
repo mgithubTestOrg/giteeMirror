@@ -17,9 +17,9 @@ jobs:
       - name: Push Mirror
         env:
           # SOURCE_REPO: 'https://github.com/mgithubTestOrg/giteeMirror.git'
-          SOURCE_REPO: 'https://github.com/"$GITHUB_REPOSITORY".git'
+          SOURCE_REPO: 'https://github.com/${{ GITHUB_REPOSITORY }}.git'
           # DESTINATION_REPO: 'git@gitee.com:mgithubTestOrg/giteeMirror.git'
-          DESTINATION_REPO: 'git@gitee.com:"$GITHUB_REPOSITORY".git'
+          DESTINATION_REPO: 'git@gitee.com:${{ GITHUB_REPOSITORY }}.git'
         run: |
           git clone --mirror "$SOURCE_REPO" && cd `basename "$SOURCE_REPO"`
           git remote set-url --push origin "$DESTINATION_REPO"
