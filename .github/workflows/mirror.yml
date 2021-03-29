@@ -20,8 +20,9 @@ jobs:
           SOURCE_REPO: 'https://github.com/${{ github.repository }}.git'
           # DESTINATION_REPO: 'git@gitee.com:mgithubTestOrg/giteeMirror.git'
           DESTINATION_REPO: 'git@gitee.com:${{ github.repository }}.git'
+          BASE_REPO: 'https://github.com/${{ github.repository }}'
         run: |
-          git clone "$SOURCE_REPO" && cd `basename "$SOURCE_REPO"`
+          git clone "$SOURCE_REPO" && cd `basename "$BASE_REPO"`
 
           if [ -f "requirements.yml" ];then
             sed -i '' 's/github/gitee/g' requirements.yml
