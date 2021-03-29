@@ -24,9 +24,7 @@ jobs:
           git clone "$SOURCE_REPO" && cd `basename "$SOURCE_REPO"`
 
           if [ -f "requirements.yml" ];then
-            sed -i '' 's/github/gitee/g' requirements.yml
-            git add requirements.yml
-            git commit -m "Make requirements.yml compatible with gitee"
+            sed -i 's/github/gitee/g' requirements.yml
           fi
           
           git remote set-url --push origin "$DESTINATION_REPO"
