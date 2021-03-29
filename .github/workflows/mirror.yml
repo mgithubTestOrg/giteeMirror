@@ -25,7 +25,7 @@ jobs:
           git clone "$SOURCE_REPO" && cd `basename "$BASE_REPO"`
 
           if [ -f "requirements.yml" ];then
-            sed -i s/github/gitee/g' requirements.yml
+            sed -i 's/github/gitee/g' requirements.yml
             git add requirements.yml
             git commit -m "Make requirements.yml compatible with gitee"
           fi
