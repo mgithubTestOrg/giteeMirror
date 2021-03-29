@@ -1,0 +1,15 @@
+- src: http://gitee.com/websoft9/role_common
+
+- src: http://gitee.com/websoft9/role_cloud
+
+- src: http://gitee.com/websoft9/role_mysql
+  
+- src: http://gitee.com/websoft9/role_docker
+
+- src: http://gitee.com/websoft9/role_nginx
+
+- src: http://gitee.com/websoft9/role_init
+
+- src: http://gitee.com/websoft9/role_preend
+
+- src: http://gitee.com/websoft9/role_end
