@@ -21,8 +21,8 @@ jobs:
           # DESTINATION_REPO: 'git@gitee.com:mgithubTestOrg/giteeMirror.git'
           DESTINATION_REPO: 'git@gitee.com:${{ github.repository }}.git'
         run: |
-          git clone --mirror "$SOURCE_REPO" && cd `basename "$SOURCE_REPO"`
-          
+          git clone "$SOURCE_REPO" && cd `basename "$SOURCE_REPO"`
+
           if [ -f "requirements.yml" ];then
             sed -i '' 's/github/gitee/g' requirements.yml
             git add requirements.yml
