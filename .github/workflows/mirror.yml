@@ -23,6 +23,8 @@ jobs:
           BASE_REPO: 'https://github.com/${{ github.repository }}'
         run: |
           git clone "$SOURCE_REPO" && cd `basename "$BASE_REPO"`
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "chz_chen@outlook.com"
 
           if [ -f "requirements.yml" ];then
             sed -i 's/github/gitee/g' requirements.yml
